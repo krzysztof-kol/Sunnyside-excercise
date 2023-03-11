@@ -76,6 +76,24 @@ body {
 
 .nav__container {
     margin: 2rem;
+    display: none;
+}
+
+.nav__container--mobile {
+    background: var(--color-primary-bright);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    /*do zrobienia jako collapsible*/
+    /* margin: 2rem;
+    padding: 2rem; */
+    clip-path: polygon(0% 7%, 96.5% 7%, 100% 0%, 100% 100%, 32.1% 100%, 0% 100%, 0% 75%);
+
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .nav__item {
@@ -89,6 +107,18 @@ body {
 .nav__item:hover {
     color: #ffd302;
 }
+
+.nav__item--mobile {
+    margin: 1.4rem;
+    font-size: 1.4rem;
+    font-family: 'Barlow', Arial, Helvetica, sans-serif;
+}
+
+.nav__item--mobile.btn {
+    margin: 1rem;
+}
+
+
 
 .logo {
     margin: 0 2rem;
@@ -107,8 +137,24 @@ body {
     cursor: pointer;
 }
 
+.btn--accent {
+    background: hsl(51, 100%, 49%);
+    padding: 1.4rem;
+    border-radius: 30rem;
+}
+
 .btn:hover {
     background: #6ed1f8;
     color: var(--color-primary-bright);
+}
+
+.hamburger {
+    margin: 2rem;
+}
+
+body {
+    background: #3dbeff;
+    height: 100vh;
+    width: 100%;
 }
 
