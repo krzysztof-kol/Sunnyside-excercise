@@ -289,3 +289,39 @@ color: #3dbeff;
         text-align: left;
     }
 }
+
+.grid--1x6 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.grid--1x4 {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 680px) {
+    .grid--1x6 {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid--1x4 {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;  
+    }
+}
+
+.grid__element1 {
+    width: 100%;
+    height: 100%;
+    background: dodgerblue;
+}
+
+.grid__element2 {
+    width: 100%;
+    height: 100%;
+    background: pink;
+}
