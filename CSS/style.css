@@ -266,9 +266,26 @@ color: #3dbeff;
     text-align: center;
     display: block;
     margin: 0 0 2rem 0;
+    width: 100%;
 }
 
 .article__text {
     text-align: center;
     margin: 0 0 2rem 0;
+}
+
+@media  screen and (min-width: 680px) {
+
+    .article {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .article__header {
+        text-align: left;
+    }
+
+    .article__text {
+        text-align: left;
+    }
 }
