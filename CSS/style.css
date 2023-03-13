@@ -26,7 +26,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.6rem;
     letter-spacing: 0.3rem;
     line-height: 1.3;
     color: var(--color-primary);
@@ -125,30 +125,41 @@ body {
     align-items: center;
     justify-content: center;
     justify-items: center;
-    /*do zrobienia jako collapsible*/
-    /* margin: 2rem;
-    padding: 2rem; */
     clip-path: polygon(0% 7%, 96.5% 7%, 100% 0%, 100% 100%, 32.1% 100%, 0% 100%, 0% 75%);
-
     margin: 0 2rem ;
-    padding: 2rem;
+    padding: 0rem;
     max-height: 0;
     opacity: 0;
-   
-
-    transition: all 0.5s;
+    /* z-index: -1; */
+    transition: all ease 0.5s;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 .nav__container--mobile.menuActive {
     max-height: 100%;
     opacity: 1;
-    z-index: 100;
+    transition: all ease 0.5s;
+    padding: 2rem;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+/* ZAMIENIĆ NA JAKIŚ CONTAINER, ŻEBY NAWIGACJA DZIAŁAŁA Z HERO POD SPODEM */
+body {
+    background: #3dbeff;
+    position: relative;
 }
 
 @media screen and (min-width: 680px) {
     .nav__container--mobile.menuActive {
         max-height: 0;
         opacity: 0;
+        /* display: none; */
+        padding: 0;
+        transition: all ease 0.5s;
     }
 }
 
@@ -386,10 +397,6 @@ color: #3dbeff;
     margin: 1rem 0 0;
 }
 
-/* .testimonial__title {
-    
-} */
-
 .testimonial__name {
     font-family: var(--font-heading);
     color: var(--color-primary);
@@ -401,3 +408,44 @@ color: #3dbeff;
     font-size: 1.2rem;
     margin: 0 0;
 }
+
+/* hero component */
+
+.hero {
+    background-color: #3dbeff;
+    background-image: url(../images/mobile/image-header.jpg);
+    padding: 3rem 0 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+.hero__heading {
+    color: var(--color-primary-bright);
+    margin: 0 4rem;
+}
+
+.hero__arrow {
+    margin: 4rem;
+    object-fit: cover;
+    height: 10rem;
+}
+
+@media screen and (min-width: 450px) {
+    .hero {
+        background-image: url(../images/desktop/image-header.jpg);
+        padding: 10rem 0 30rem;
+    }
+}
+
+
+
+
+
+
