@@ -321,8 +321,8 @@ color: #3dbeff;
 
 .grid--1x4 {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
 }
 
 @media screen and (min-width: 950px) {
@@ -333,7 +333,7 @@ color: #3dbeff;
 
     .grid--1x4 {
         grid-template-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;  
+        grid-template-columns: repeat(2,1fr);  
     }
 }
 
