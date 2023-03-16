@@ -38,6 +38,13 @@ h2 {
     color: var(--color-primary);
 }
 
+@media screen and (max-width: 360px) {
+
+    h2 {
+        font-size: clamp(2rem, 2vw + 1rem, 3rem);
+    }
+}
+
 h3 {
     font-size: 2rem;
     color: var(--color-body);
@@ -529,6 +536,12 @@ picture > img {
 @media screen and (min-width: 950px) {
     .grid-element--reverse {
         grid-row: 1;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .grid-element__headline { 
+        font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem);
     }
 }
 
